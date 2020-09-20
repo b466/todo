@@ -1,0 +1,27 @@
+current directory: /home/vagrant/work/todo/vendor/bundle/ruby/2.5.0/gems/bcrypt-3.1.16/ext/mri
+/home/vagrant/.rbenv/versions/2.5.7/bin/ruby -r ./siteconf20200918-10814-ehb2jk.rb extconf.rb
+creating Makefile
+
+current directory: /home/vagrant/work/todo/vendor/bundle/ruby/2.5.0/gems/bcrypt-3.1.16/ext/mri
+make "DESTDIR=" clean
+
+current directory: /home/vagrant/work/todo/vendor/bundle/ruby/2.5.0/gems/bcrypt-3.1.16/ext/mri
+make "DESTDIR="
+compiling bcrypt_ext.c
+compiling crypt_blowfish.c
+gcc  -D__SKIP_GNU -I/home/vagrant/.rbenv/versions/2.5.7/include     -c -o x86.o x86.S
+compiling crypt_gensalt.c
+compiling wrapper.c
+wrapper.c:182:60: 警告: 仮引数リスト内で ‘struct crypt_data’ が宣言されています [デフォルトで有効]
+ char *crypt_r(const char *key, const char *setting, struct crypt_data *data)
+                                                            ^
+wrapper.c:182:60: 警告: そのスコープはこの定義または宣言のみです。これは多分希望したものではないでしょう [デフォルトで有効]
+cc1: 警告: 認識できないコマンドラインオプション "-Wno-self-assign" です [デフォルトで有効]
+cc1: 警告: 認識できないコマンドラインオプション "-Wno-constant-logical-operand" です [デフォルトで有効]
+cc1: 警告: 認識できないコマンドラインオプション "-Wno-parentheses-equality" です [デフォルトで有効]
+cc1: 警告: 認識できないコマンドラインオプション "-Wno-tautological-compare" です [デフォルトで有効]
+linking shared-object bcrypt_ext.so
+
+current directory: /home/vagrant/work/todo/vendor/bundle/ruby/2.5.0/gems/bcrypt-3.1.16/ext/mri
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bcrypt_ext.so ./.gem.20200918-10814-btxtr9
