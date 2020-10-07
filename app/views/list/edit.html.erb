@@ -1,6 +1,6 @@
 <div class="listeditPage">
   <div class="container">
-   <%= form_with model: @list, url list_path,class: "listForm", local: true do |f|  %>
+   <%= form_with model: @list, url: list_path,class: "listForm", local: true do |f|  %>
    <% if @list.errors.any? %>
     <p class="text-danger">タイトルは1~225文字以内で入力したください</p>
    <% end %>
