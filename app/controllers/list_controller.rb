@@ -29,7 +29,7 @@ class ListController < ApplicationController
 
     def destroy
       @list.destroy
-      redirect_to :root
+      redirect_to
     end
   
     private
@@ -38,7 +38,7 @@ class ListController < ApplicationController
       end
 
       def set_list
-        @list = List.find(  params[:id])
+        @list = List.find_by(id: params[:id])
       end
   
   end
