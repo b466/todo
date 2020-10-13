@@ -17,6 +17,7 @@ class CardController < ApplicationController
   end
 
   def show
+    @card = Card.find_by(id: params[:list_id])
   end
 
   def edit
