@@ -1,7 +1,7 @@
-<div class="carddetailPage">
+<div class='carddetailPage'>
   <div class="container">
     <div class="cardContents">
-      <div class="cardContenrs_title">
+      <div class="cardContents_title">
         <div>タイトル</div>
         <h2><%= @card.title %></h2>
       </div>
@@ -9,11 +9,10 @@
         <div>メモ</div>
         <div><%= @card.memo %></div>
       </div>
-      <div class="cardContens_listStatus">
+      <div class="cardContents_listStatus">
         <div>リスト名</div>
         <div><%= @card.list.title %></div>
       </div>
     </div>
   </div>
 </div>
-
