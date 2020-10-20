@@ -1,4 +1,7 @@
 class CardController < ApplicationController
+   # show・edit・updateアクションを呼ぶ前にset_cardメソッドを読む
+  before_action :set_card, only: %i(show edit update)
+
   def new
     @card = Card.new
     @list = List.find_by(id: params[:list_id])
@@ -17,14 +20,24 @@ class CardController < ApplicationController
   end
 
   def show
-    @card = Card.find_by(id: params[:id])
   end
 
   def edit
   end
 
+  def update
+    if @card.update_attributes(card_params)
+      redirect_to :root
+    else
+      render action: :edit
+  end
+
   private
   def card_params
     params.require(:card).permit(:title, :memo, :list_id)
+  end
+
+  def set_card
+    @card = Card.find_by(id: params[:id])
   end
 end
